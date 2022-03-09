@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: auto;
+            padding: 0px;
+        }
+        
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+        }
+        
+        body {
+            background-image: url(../img/background.jpg);
+        }
+        
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(20, 214, 228);
+            line-height: 50px;
+        }
+        
+        header {
+            height: 150px;
+            width: 1089px;
+            background-image: url(../img/image1.jpg);
+        }
+        
+        .content {
+            height: 300px;
+            width: 100%;
+            background-color: rgb(27, 104, 219);
+        }
+        
+        aside {
+            height: 100%;
+            width: 436px;
+            float: left;
+            background-image: url(../img/background2.png)
+        }
+        
+        section {
+            height: 100%;
+            width: 653px;
+            float: left;
+            background-image: url(../img/background1.png)
+        }
+        
+        .menu li {
+            height: 100%;
+            width: 130px;
+            background-color: antiquewhite;
+            float: left;
+            line-height: 50px;
+            text-indent: 20px;
+            list-style: none;
+            position: relative;
+        }
+        
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .menu li:hover {
+            background-color: black
+        }
+        
+        li:hover>a {
+            color: white;
+            font-style: italic;
+        }
+        
+        .menu li .submenu {
+            display: none;
+            position: absolute;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+        }
+        
+        nav span form #btnGo {
+            padding: 3px;
+            border-radius: 50%;
+        }
+        
+        nav span form #txtEmail {
+            padding: 3px;
+            border-radius: 10%;
+        }
+        
+        .wrapper header p {
+            font-size: 50px;
+            text-shadow: 10px 20px 20px red;
+            text-align: center;
+        }
+        
+        .wrapper header:hover p {
+            transform: rotate(25deg);
+        }
+        
+        footer {
+            height: 200px;
+            width: 1089px;
+            background-color: red;
+            background-image: url(../img/background3.jpg);
+            text-align: center;
+        }
+        
+        footer ul li {
+            list-style: none;
+        }
+    </style>
+
+    <title>Layout-TH</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="http://google.com.vn">HOME</a>
+                </li>
+                <li>
+                    <a href="http://google.com.vn">SERVICES</a>
+                </li>
+                <li>
+                    <a href="http://google.com.vn">CONTACT</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="">PHONE</a>
+                        </li>
+                        <li>
+                            <a href="">INTERNET</a>
+                        </li>
+                        <li>
+                            <a href="">TV</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="http://google.com.vn">ABOUT</a>
+                </li>
+                <li>
+                    <a href="http://google.com.vn">HELP</a>
+                </li>
+            </ul>
+            <span>
+                <form action="" method="post">
+                    <label for="Email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email" minlength="20">
+                    <input type="submit" value="GO" id="btnGo">
+                </form>
+            </span>
+        </nav>
+
+        <header>
+            <p>GAME SHOW</p>
+        </header>
+
+        <div class="content">
+            <aside>
+                <article>
+                    <h4>HOAT DONG DOAN</h4>
+                    <img src="../img/hoatdongdoan.jpg" alt="" srcset="">
+                </article>
+
+                <article>
+                    <h4>HOAT DONG HOC TAP</h4>
+                    <img src="../img/hoctap.jpg" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <h2>DANG KY DANH SACH</h2>
+                <form action="dangky.php" method="post">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+
+                        <label for="lblHoTen">Ho ten: </label>
+                        <input type="text" name="txtHoTen" id="txtHoTen" required placeholder="Nhap ho ten" minlength="20"><br><br>
+
+                        <label for="lblGioiTinh">Gioi tinh: </label>
+                        <input type="radio" name="radgt" id="radNam" value="nam"><label>Nam</label>
+                        <input type="radio" name="radgt" id="radNu" value="nu"><label>Nu</label><br><br>
+
+                        <label for="NgaySinh">Ngay sinh: </label>
+                        <input type="date" name="txtDate" id="txtDate" required placeholder="Ngay sinh" minlength="20" pattern="dd/mm/yyyy"><br><br>
+
+                        <label for="phone">Phone: </label>
+                        <input type="number" name="phone" id="phone" required placeholder="Nhap so phone"><br><br>
+
+                        <label for="mail">Email: </label>
+                        <input type="email" name="mail" id="mail" required placeholder="Nhap Email" minlength="20"><br><br>
+
+                        <input type="submit" value="Xac Nhan">
+                    </fieldset>
+                </form>
+
+            </section>
+        </div>
+
+        <footer>
+            <h2>Thông Tin Liên Hệ</h2>
+            <ul>
+                <li>
+                    <span>Địa chỉ: Đường Số 12 Nguyễn Văn Bảo, Quận Gò Vấp, Thành Phố Hồ Chí Minh</span>
+                </li>
+
+                <li>
+
+                    <p><a href="">Điện thoại: 0283.8490 390</a></p>
+                </li>
+
+
+                <li>
+                    <p><a href="">Fax: 0283.9940 954</a></p>
+                </li>
+
+                <li>
+                    <p><a href="">Email: email@gmail.com</a></p>
+                </li>
+
+
+        </footer>
+    </div>
+</body>
+
+</html>
